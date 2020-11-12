@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic HTML5 Form</title>
+
+  <style>
+    body {
+      margin: auto;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    form {
+      /* width: 25vw; */
+      margin: auto;
+      vertical-align: middle;
+    }
+
+    textarea {
+      resize: vertical;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .input-field {
+      margin: 1vh 0;
+    }
+
+    textarea:focus~.floating-label,
+    textarea:valid~.floating-label {
+      margin-top: 1pt;
+      margin-left: -30rem;
+      font-size: 11px;
+      text-decoration: underline;
+      opacity: 1;
+    }
+
+    .selector {
+      font-size: 14px;
+      width: 30.5rem;
+      height: 50px;
+      margin-bottom: 5pt;
+    }
+
+    .select-box>.floating-label {
+      text-decoration: underline;
+      position: absolute;
+      pointer-events: none;
+      margin-left: -30rem;
+      margin-top: 1pt;
+      font-size: 11px;
+      transition: 0.2s ease all;
+    }
+
+    input:focus~.floating-label,
+    input:not(:focus):valid~.floating-label {
+      margin-top: 1pt;
+      margin-left: -30rem;
+      font-size: 11px;
+      text-decoration: underline;
+      opacity: 1;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ddd;
+    }
+
+    input[type="submit"] {
+      cursor: pointer;
+      font-size: 14px;
+      width: 100%;
+      height: 50px;
+      margin-bottom: 5pt;
+    }
+
+    .inputText {
+      font-size: 14px;
+      width: 30rem;
+      height: 50px;
+      margin-bottom: 5pt;
+    }
+
+    .input-text>.floating-label {
+      position: absolute;
+      pointer-events: none;
+      margin-left: -30rem;
+      margin-top: 20px;
+      transition: 0.2s ease all;
+    }
+
+    .input-textarea>.floating-label {
+      display: inline-block;
+      position: absolute;
+      pointer-events: none;
+      margin-left: -30rem;
+      margin-top: 20px;
+      transition: 0.2s ease all;
+    }
+
+    .input-date>.floating-label {
+      position: absolute;
+      pointer-events: none;
+      margin-left: -30rem;
+      margin-top: 1pt;
+      font-size: 11px;
+      transition: 0.2s ease all;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <form action="#" method="post">
+      <fieldset>
+        <legend>STT Nurul Fikri</legend>
+
+        <h3>Registration Form</h3>
+        <div class='input-text'>
+          <input type="text" class="inputText" required />
+          <span class="floating-label">Child's Name</span>
+        </div>
+        <div class='input-text'>
+          <input type="text" class="inputText" required />
+          <span class="floating-label">Parent's Email</span>
+        </div>
+        <div class='input-text'>
+          <input type="text" class="inputText" required />
+          <span class="floating-label">Phone Number</span>
+        </div>
+        <div class='input-date'>
+          <input type="date" class="inputText" required />
+          <span class="floating-label">Birth Day</span>
+        </div>
+        <hr />
+
+        <h3>Cooming to Grade</h3>
+        <div class='select-box'>
+          <select class="selector">
+            <option>Early Childhood Years</option>
+            <option>Elementary</option>
+            <option>Middle School</option>
+            <option>High School</option>
+          </select>
+        </div>
+        <div class='input-text'>
+          <input type="text" class="inputText" required />
+          <span class="floating-label">Previous School</span>
+        </div>
+  </div>
+  <hr />
+
+  <div class='input-date'>
+    <input type="submit" value="Kirim" />
+  </div>
+  </fieldset>
+  <div style="display: block; text-align: center; margin-top: 5pt;">
+  </div>
+  </form>
+  </div>
+
+</body>
+
+</html>
